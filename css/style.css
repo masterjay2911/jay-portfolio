@@ -192,4 +192,57 @@ section h2{
     padding-bottom: 110px;
   }
 }
+/* =====================
+   HAMBURGER MENU (NEW)
+===================== */
+
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+}
+
+.hamburger span{
+  width:25px;
+  height:3px;
+  background:#00f2ff;
+  border-radius:3px;
+}
+
+/* =====================
+   MOBILE MENU
+===================== */
+.mobile-menu{
+  display:none;
+  flex-direction:column;
+  background:#000;
+  border-bottom:1px solid #111;
+}
+
+.mobile-menu a{
+  padding:14px;
+  text-align:center;
+  text-decoration:none;
+  color:#00f2ff;
+  border-top:1px solid #111;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width:768px){
+
+  .top-nav{
+    display:none;
+  }
+
+  .hamburger{
+    display:flex;
+  }
+
+  .mobile-menu.active{
+    display:flex;
+  }
+}
 
