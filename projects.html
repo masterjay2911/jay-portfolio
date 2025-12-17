@@ -11,26 +11,46 @@
 
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="logo">Jay Mali</div>
-  <div class="top-btns">
+
+  <!-- Desktop Nav -->
+  <nav class="top-nav">
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hamburger (Mobile) -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 </header>
 
+<!-- Mobile Menu -->
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- PROJECTS -->
 <section>
   <h2>All Projects</h2>
 
   <div class="glass project">
     <h3>OSINT Telegram Bot</h3>
-    <p><p>
-This OSINT Telegram bot uses only open-source and publicly accessible information for analysis.
-The tool does not collect, store, or expose private or sensitive personal data and is intended for educational use only.
-</p>
-</p>
+    <p>
+      This OSINT Telegram bot uses only open-source and publicly accessible
+      information for analysis. Intended for educational use only.
+    </p>
     <span class="badge">Completed</span>
-    <a class="link-btn" href="https://t.me/Anka_info_bot">Bot Link →</a>
+    <a class="link-btn" href="https://t.me/Anka_info_bot" target="_blank" rel="noopener">
+      Bot Link →
+    </a>
   </div>
 
   <div class="glass project">
@@ -39,47 +59,58 @@ The tool does not collect, store, or expose private or sensitive personal data a
     <span class="badge">Working</span>
     <a class="link-btn" href="#">GitHub Repo →</a>
   </div>
-<div class="glass project">
-    <h3>SMS Bomber (Eductional Purpose)</h3>
 
+  <div class="glass project">
+    <h3>SMS Bomber (Educational Purpose)</h3>
     <p>
-        An educational cybersecurity project used to study SMS spam behavior and prevention techniques.
+      Educational cybersecurity project to study SMS spam behavior and
+      prevention techniques.
     </p>
-
     <span class="badge">Status</span>
-
     <a class="link-btn" href="#" target="_blank" rel="noopener">
-        Bot Link →
+      Bot Link →
     </a>
-</div>
+  </div>
+
   <div class="glass project">
     <h3>3D Rotating Image Carousel</h3>
-
     <p>
-        Interactive 3D carousel built with HTML, CSS, and JavaScript.
+      Interactive 3D carousel built with HTML, CSS, and JavaScript.
     </p>
-
     <span class="badge">Status</span>
-
     <a class="link-btn" href="https://jaymali-3d.netlify.app/" target="_blank" rel="noopener">
-         Link →
+      Link →
     </a>
-</div>
+  </div>
+
   <div class="glass project">
     <h3>ZenParticles — Gesture-Controlled 3D Particle Experience</h3>
-
     <p>
-        ZenParticles is an interactive 3D particle system controlled using real-time hand gestures. It combines Three.js and custom GLSL shaders with MediaPipe hand tracking to create a fluid, immersive WebGL experience directly in the browser.
+      Interactive 3D particle system using Three.js, GLSL shaders,
+      and MediaPipe hand tracking.
     </p>
-
     <span class="badge">Status</span>
-
     <a class="link-btn" href="https://zenparticles-jaymali.vercel.app/" target="_blank" rel="noopener">
-         Link →
+      Link →
     </a>
-</div>
-
+  </div>
 </section>
+
+<!-- HAMBURGER SCRIPT -->
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+  });
+
+  mobileMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+    });
+  });
+</script>
 
 </body>
 </html>
